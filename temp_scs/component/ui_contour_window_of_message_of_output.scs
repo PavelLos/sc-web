@@ -1,0 +1,7 @@
+ui_contour_window_of_message_of_output <- ui_contour_window;;
+
+ui_contour_window_of_message_of_output => nrel_main_idtf:
+	[Контурное окно истории вывода сообщений]
+	(* <- lang_ru;; *);
+	[Outline message output history window]
+	(* <- lang_en;; *);;

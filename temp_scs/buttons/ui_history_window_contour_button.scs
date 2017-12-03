@@ -1,0 +1,11 @@
+ui_history_window_contour_button <- ui_button;
+                                 <- ui_history_window_list;;
+
+ui_history_window_contour_button => nrel_main_idtf:
+	[Контурная кнопка окна истории]
+	(* <- lang_ru;; *);
+	[A contour button of the history window]
+	(* <- lang_en;; *);;
+
+ui_button_for_displaying_hypertext_content => nrel_class_of_arguments: ui_contour_window_of_message_of_output;;
+

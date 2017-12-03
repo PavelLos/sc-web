@@ -1,0 +1,16 @@
+ui_history_window_list <- ui_list;;
+
+ui_history_window_list => nrel_main_idtf:
+	[Список окна истории]
+	(* <- lang_ru;; *);
+	[History window list]
+	(* <- lang_en;; *);;
+
+nrel_vertically -> ...
+	(*
+		-> ui_history_window_list;;
+	*);;
+
+ui_history_window_list
+ui_history_window_list -> rrel_1: ui_button_for_selecting_active_history_window;;
+ui_history_window_list -> rrel_selected_command: ui_button_for_selecting_active_history_window;;

@@ -1,0 +1,21 @@
+ui_button_for_selecting_active_history_window <- ui_button;
+                                              <- ui_command_to_select_the_active_history_window;
+                                              <- ui_last_command_executed_mod;;
+
+ui_button_for_selecting_active_history_window => nrel_main_idtf:
+	[Кнопка выбора активного окна истории]
+	(* <- lang_ru;; *);
+	[Button for selecting the active history window]
+	(* <- lang_en;; *);;
+
+ui_button_for_selecting_active_history_window => nrel_class_of_arguments: ui_contour_active_window_of_message_of_output;;
+
+ui_button_for_selecting_active_history_window -> command_node_of_ui_button_for_selecting_active_history_window;;
+command_node_of_ui_button_for_selecting_active_history_window <- command;;
+command_node_of_ui_button_for_selecting_active_history_window => ui_nrel_command_lang_template: text_label_of_ui_button_for_selecting_active_history_window;;
+text_label_of_ui_button_for_selecting_active_history_window <- ui_text_label;;nrel_idtf
+ui_button_for_selecting_active_history_window => nrel_idtf: text_label_of_ui_button_for_selecting_active_history_window;;
+ui_button_for_selecting_active_history_window -> action_of_ui_button_for_selecting_active_history_window;;
+action_of_ui_button_for_selecting_active_history_window <- question;;
+action_of_ui_button_for_selecting_active_history_window => nrel_goto: action_of_ui_command_to_select_the_active_history_window;;
+action_of_ui_command_to_select_the_active_history_window <- question;;

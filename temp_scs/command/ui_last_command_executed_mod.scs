@@ -1,0 +1,7 @@
+ui_last_command_executed_mod <- sc_node_not_relation;;
+
+ui_command_to_select_the_active_history_window => nrel_main_idtf:
+	[Режим последней выполненной команды]
+	(* <- lang_ru;; *);
+	[The mode of the last command executed]
+	(* <- lang_en;; *);;

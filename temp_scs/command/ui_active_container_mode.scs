@@ -1,0 +1,7 @@
+ui_active_container_mode <- sc_node_not_relation;;
+
+ui_active_container_mode => nrel_main_idtf:
+	[Режим активного контейнера]
+	(* <- lang_ru;; *);
+	[Active container mode]
+	(* <- lang_en;; *);;

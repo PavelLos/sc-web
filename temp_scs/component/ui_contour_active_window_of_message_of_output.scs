@@ -1,0 +1,8 @@
+ui_contour_active_window_of_message_of_output <- ui_contour_window;
+                                              <- ui_active_container_mode;;
+
+ui_contour_active_window_of_message_of_output => nrel_main_idtf:
+	[Активное контурное окно истории вывода сообщений]
+	(* <- lang_ru;; *);
+	[Active outline message output history window]
+	(* <- lang_en;; *);;

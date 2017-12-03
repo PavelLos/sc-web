@@ -120,6 +120,12 @@ SCWeb.ui.WindowManager = {
             self.setHistoryItemActive(question_addr);
         });
 
+        SCWeb.core.Server.resolveScAddr(['ui_contour_window_of_message_of_output', 'ui_contour_active_window_of_message_of_output', 'ui_history_window_list'], function (keynodes) {
+            $("#contour_window_of_message_of_output").attr("sc_addr", keynodes['ui_contour_window_of_message_of_output']);
+            $("#contour_active_window_of_message_of_output").attr("sc_addr", keynodes['ui_contour_active_window_of_message_of_output']);
+            $("#history-items").attr("sc_addr", keynodes['ui_history_window_list']);
+        });
+
         // Translate added item, push new item state in browser history.
         // UI elements, such as menu-items, scn-elements, etc. contains <a href='#'></a> and each
         // agent call provide GET request and change URL with adding # symbol at the end. Also,
