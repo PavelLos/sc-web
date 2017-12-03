@@ -75,6 +75,40 @@ SCWeb.ui.Menu = {
 
         $(this.menu_container_id).append(menuHtml);
 
+        var menuItemsAtom = $('.menu-item.menu-cmd-atom');
+        for(i in menuItemsAtom){
+            var dfd = new jQuery.Deferred();
+            window.scHelper.checkEdge(
+                window.scKeynodes.ui_one_argument_command_class,
+                sc_type_arc_pos_const_perm,
+                i.id)
+            .done(function() {
+                i.css("background-color", "red");
+            })
+            .fail(function() {
+                window.scHelper.checkEdge(
+                    
+                    window.scKeynodes.ui_two_argument_command_class,
+                    sc_type_arc_pos_const_perm,
+                    i.id)
+                .done(function() {
+                    i.css("background-color", "blue");
+                })
+                .fail(function() {
+                    window.scHelper.checkEdge(
+                        window.scKeynodes.ui_no_argument_command_class,
+                        sc_type_arc_pos_const_perm,
+                        i.id)
+                    .done(function() {
+                        i.css("background-color", "green");
+                    })
+                    .fail(function() {
+                        i.css("background-color", "white");                     
+                    });
+                });
+            });
+        }
+
         this._registerMenuHandler();
     },
 
